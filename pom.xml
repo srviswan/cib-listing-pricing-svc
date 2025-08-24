@@ -38,8 +38,8 @@
     <modules>
         <module>common</module>
         <module>basket-core-service</module>
+        <module>market-data-service</module>
         <!-- Other modules will be added in Phase 2 -->
-        <!-- <module>market-data-service</module> -->
         <!-- <module>publishing-service</module> -->
         <!-- <module>analytics-service</module> -->
     </modules>
@@ -162,16 +162,7 @@
                 <version>${lombok.version}</version>
                 <optional>true</optional>
             </dependency>
-            <dependency>
-                <groupId>io.r2dbc</groupId>
-                <artifactId>r2dbc-postgresql</artifactId>
-                <version>1.0.2.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>io.r2dbc</groupId>
-                <artifactId>r2dbc-pool</artifactId>
-                <version>1.0.2.RELEASE</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>

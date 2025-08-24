@@ -1,0 +1,166 @@
+spring:
+  application:
+    name: market-data-service
+  profiles:
+    active: dev
+
+server:
+  port: 8082
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,env
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+    metrics:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+      percentiles:
+        http.server.requests: 0.5,0.95,0.99
+
+logging:
+  level:
+    com.custom.indexbasket.marketdata: INFO
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc.postgresql: DEBUG
+    reactor.netty: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/basket_management
+    username: basket_app_user
+    password: basket_app_password
+    pool:
+      initial-size: 5
+      max-size: 20
+      max-idle-time: 30m
+      max-acquire-time: 30s
+      max-create-connection-time: 30s
+
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+# Market Data Service specific configuration
+market-data:
+  service:
+    name: Market Data Service
+    version: 1.0.0
+    description: Real-time market data, pricing, and analytics service
+  
+  data-sources:
+    primary: "BLOOMBERG"
+    secondary: "REUTERS"
+    backup: "YAHOO_FINANCE"
+    
+  # Proxy Services Configuration
+  proxy:
+    enabled: true
+    circuit-breaker:
+      enabled: true
+      sliding-window-size: 10
+      failure-rate-threshold: 50.0
+      wait-duration-open-state: 30s
+      permitted-calls-half-open: 5
+    rate-limiting:
+      enabled: true
+      default-rate: 1000
+    data-quality:
+      enabled: true
+      validation-rules:
+        price:
+          min-price: 0.01
+          max-price: 1000000.00
+          max-spread-percentage: 50.0
+        volume:
+          min-volume: 0
+          max-volume: 1000000000
+        consistency:
+          enabled: true
+          strict-mode: false
+    caching:
+      enabled: true
+      strategy: "quality-based-ttl"
+      redis:
+        host: localhost
+        port: 6379
+        database: 0
+        connection-pool-size: 10
+    
+  refresh:
+    interval: 30s
+    batch-size: 100
+    max-retries: 3
+    
+  analytics:
+    risk-metrics:
+      enabled: true
+      calculation-interval: 1m
+    performance-metrics:
+      enabled: true
+      calculation-interval: 5m
+    diversification-scoring:
+      enabled: true
+      update-interval: 15m
+      
+  monitoring:
+    health-check:
+      enabled: true
+      interval: 30s
+    metrics:
+      enabled: true
+      collection-interval: 1m
+    alerts:
+      enabled: true
+      data-quality-threshold: 0.8
+      latency-threshold: 100ms
+
+# gRPC Configuration
+grpc:
+  server:
+    port: 9090
+    max-message-size: 1048576 # 1MB
+    max-connection-age: 30s
+    max-connection-age-grace: 5s
+    
+# Event Publishing Configuration
+event-publishing:
+  enabled: true
+  protocol: GRPC
+  retry:
+    max-attempts: 3
+    backoff:
+      initial: 100ms
+      multiplier: 2.0
+      max-delay: 5s
+      
+# Performance Configuration
+performance:
+  schedulers:
+    bounded-elastic:
+      thread-capacity: 20
+      queue-capacity: 1000
+    parallel:
+      thread-capacity: 8
+      queue-capacity: 500
+  connection-pooling:
+    enabled: true
+    max-connections: 50
+    min-idle: 5
+    max-lifetime: 30m
