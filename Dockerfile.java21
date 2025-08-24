@@ -1,0 +1,29 @@
+# Use OpenJDK 21 for immediate testing
+FROM eclipse-temurin:21-jdk
+
+# Set working directory
+WORKDIR /app
+
+# Install Maven
+RUN apt-get update && apt-get install -y maven
+
+# Copy pom files
+COPY pom.xml .
+COPY common/pom.xml common/
+COPY basket-core-service/pom.xml basket-core-service/
+
+# Copy source code
+COPY common/src common/src
+COPY basket-core-service/src basket-core-service/src
+
+# Build the entire project first
+RUN mvn clean install -DskipTests
+
+# Expose port
+EXPOSE 8081
+
+# Set Java options for better performance
+ENV JAVA_OPTS="-Xmx2g -Xms1g -XX:+UseG1GC"
+
+# Run the application
+CMD ["mvn", "spring-boot:run", "-pl", "basket-core-service"]

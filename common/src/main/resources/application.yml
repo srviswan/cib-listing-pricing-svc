@@ -1,0 +1,224 @@
+spring:
+  application:
+    name: custom-index-basket-management
+  profiles:
+    active: kafka  # Default to Kafka implementation (Solace requires enterprise repo)
+  
+  # Common configurations
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+      fail-on-empty-beans: false
+    deserialization:
+      fail-on-unknown-properties: false
+    time-zone: UTC
+  
+  # Database configuration (TimescaleDB)
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/basket_platform
+    username: basket_app_user
+    password: basket_app_password
+    pool:
+      initial-size: 5
+      max-size: 20
+      max-idle-time: 30m
+  
+  # Actuator configuration
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info,metrics,prometheus
+    endpoint:
+      health:
+        show-details: when-authorized
+        show-components: always
+    metrics:
+      export:
+        prometheus:
+          enabled: true
+    health:
+      defaults:
+        enabled: true
+      db:
+        enabled: true
+      redis:
+        enabled: true
+      kafka:
+        enabled: true
+      solace:
+        enabled: true
+
+# Application-specific configurations
+basket:
+  platform:
+    name: "Custom Index Basket Management Platform"
+    version: "1.0.0"
+    
+    # Performance targets
+    performance:
+      rest-api-latency: 500ms
+      event-streaming-latency: 100ms
+      grpc-latency: 10ms
+      actor-latency: 1ms
+      
+    # Workflow configurations
+    workflow:
+      approval:
+        timeout: 300s
+        retry-attempts: 3
+        auto-approve: false
+      
+      backtesting:
+        max-duration: 5m
+        parallel-executions: 4
+        cache-results: true
+        
+      publishing:
+        vendor-timeout: 90s
+        retry-attempts: 3
+        circuit-breaker:
+          failure-threshold: 5
+          recovery-timeout: 60s
+    
+    # Market data configurations
+    market-data:
+      cache-ttl: 5s
+      batch-size: 1000
+      real-time-update-interval: 5s
+      historical-data-retention: 15y
+      
+    # Monitoring configurations
+    monitoring:
+      metrics:
+        enabled: true
+        collection-interval: 30s
+      tracing:
+        enabled: true
+        sampling-rate: 0.1
+      alerting:
+        enabled: true
+        sla-violation-threshold: 2m
+
+# Logging configuration
+logging:
+  level:
+    com.custom.indexbasket: INFO
+    org.springframework.statemachine: DEBUG
+    com.typesafe.akka: INFO
+    io.grpc: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/basket-platform.log
+    max-size: 100MB
+    max-history: 30
+
+# Server configuration
+server:
+  port: 8080
+  shutdown: graceful
+  error:
+    include-message: always
+    include-binding-errors: always
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+
+# Security configuration
+security:
+  jwt:
+    secret: ${JWT_SECRET:your-secret-key-here}
+    expiration: 3600s
+    refresh-expiration: 86400s
+  cors:
+    allowed-origins: "*"
+    allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+    max-age: 3600
+
+# Cache configuration
+cache:
+  default-ttl: 300s
+  regions:
+    basket-definitions: 3600s
+    market-data: 5s
+    user-sessions: 1800s
+    backtest-results: 86400s
+
+# Messaging configuration
+messaging:
+  provider: solace  # solace or kafka
+  default-topic-prefix: "basket.platform"
+  topics:
+    basket-approved: "basket.approved"
+    basket-created: "basket.created"
+    basket-updated: "basket.updated"
+    market-data-updated: "market.data.updated"
+    valuation-calculated: "valuation.calculated"
+    price-published: "price.published"
+    approval-requested: "approval.requested"
+    audit-event: "audit.event"
+    backtest-requested: "backtest.requested"
+    backtest-completed: "backtest.completed"
+    backtest-failed: "backtest.failed"
+
+# Database configuration
+database:
+  timescaledb:
+    enabled: true
+    compression:
+      enabled: true
+      chunk-time-interval: 1d
+    retention:
+      enabled: true
+      data-retention: 15y
+      backtest-retention: 1y
+    continuous-aggregates:
+      enabled: true
+      refresh-interval: 1h
+
+# Vendor integration configuration
+vendor:
+  bloomberg:
+    enabled: true
+    bsym-endpoint: ${BBG_BSYM_ENDPOINT:https://api.bloomberg.com/bsym}
+    blpapi-endpoint: ${BBG_BLPAPI_ENDPOINT:https://api.bloomberg.com/blpapi}
+    timeout: 30s
+    retry-attempts: 3
+    
+  refinitiv:
+    enabled: true
+    rdp-endpoint: ${REF_RDP_ENDPOINT:https://api.refinitiv.com/rdp}
+    elektron-endpoint: ${REF_ELEKTRON_ENDPOINT:https://api.refinitiv.com/elektron}
+    timeout: 30s
+    retry-attempts: 3
+
+# Performance tuning
+performance:
+  thread-pool:
+    core-size: 8
+    max-size: 32
+    queue-capacity: 1000
+    keep-alive: 60s
+  
+  connection-pool:
+    max-connections: 100
+    max-idle-time: 30m
+    connection-timeout: 30s
+    
+  batch-processing:
+    batch-size: 1000
+    batch-timeout: 5s
+    max-concurrency: 4
+
+# Development configuration
+development:
+  enabled: false
+  mock-external-services: false
+  sample-data: false
+  debug-endpoints: false

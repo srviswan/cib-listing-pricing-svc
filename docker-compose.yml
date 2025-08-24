@@ -1,0 +1,212 @@
+version: '3.8'
+
+services:
+  # PostgreSQL with TimescaleDB extension
+  postgres-timescale:
+    image: timescale/timescaledb:latest-pg15
+    container_name: basket-timescaledb
+    environment:
+      POSTGRES_DB: basket_platform
+      POSTGRES_USER: basket_user
+      POSTGRES_PASSWORD: basket_password
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U basket_user -d basket_platform"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - basket-network
+
+  # Solace PubSub+ Event Broker (Primary)
+  solace:
+    image: solace-pubsub-standard:latest
+    container_name: basket-solace
+    ports:
+      - "55555:55555"  # SMF
+      - "8008:8008"    # Management
+      - "8080:8080"    # HTTP
+      - "1943:1943"    # HTTPS
+    environment:
+      - system_scaling_connectionCount=100
+      - system_scaling_maxConnectionCount=1000
+    volumes:
+      - solace_data:/var/lib/solace
+      - ./solace/config:/solace/config
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/SEMP/v2/config/about"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - basket-network
+    profiles:
+      - solace
+
+  # SolCache Data Grid (Primary)
+  solcache:
+    image: solace-pubsub-cache:latest
+    container_name: basket-solcache
+    ports:
+      - "11222:11222"  # HotRod
+      - "9990:9990"    # Management
+    environment:
+      - INFINISPAN_SERVER_CONFIG_PATH=/opt/infinispan/server/conf
+      - INFINISPAN_CONFIG_PATH=/opt/infinispan/server/conf
+    volumes:
+      - solcache_data:/opt/infinispan/server/data
+      - ./solcache/config:/opt/infinispan/server/conf
+    depends_on:
+      - solace
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9990/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - basket-network
+    profiles:
+      - solace
+
+  # Apache Kafka (Alternative)
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    container_name: basket-kafka
+    ports:
+      - "9092:9092"
+      - "9101:9101"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_HOST://localhost:9101
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_JMX_PORT: 9101
+      KAFKA_JMX_HOSTNAME: localhost
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_DELETE_TOPIC_ENABLE: 'true'
+    depends_on:
+      - zookeeper
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics --bootstrap-server localhost:9092 --list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - basket-network
+    profiles:
+      - kafka
+
+  # Zookeeper for Kafka
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    container_name: basket-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc localhost 2181"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - basket-network
+    profiles:
+      - kafka
+
+  # Redis (Alternative)
+  redis:
+    image: redis:7.2-alpine
+    container_name: basket-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass redis_password
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - basket-network
+    profiles:
+      - kafka
+
+  # Prometheus for monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: basket-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - basket-network
+
+  # Grafana for dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: basket-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+      - basket-network
+
+  # Jaeger for distributed tracing
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: basket-jaeger
+    ports:
+      - "16686:16686"  # UI
+      - "14268:14268"  # HTTP collector
+      - "14250:14250"  # gRPC collector
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - basket-network
+
+volumes:
+  postgres_data:
+    driver: local
+  solace_data:
+    driver: local
+  solcache_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+networks:
+  basket-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

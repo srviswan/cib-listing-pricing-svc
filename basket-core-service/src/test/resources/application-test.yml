@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: basket-core-service-test
+  profiles:
+    active: test
+  
+  # R2DBC Test Configuration (will be overridden by Testcontainers)
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    
+  # Disable Flyway for tests
+  flyway:
+    enabled: false
+    
+  # Test-specific logging
+logging:
+  level:
+    com.custom.indexbasket: DEBUG
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc.postgresql: DEBUG
+    reactor.netty.http.client: DEBUG
+  
+# Test management endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+  endpoint:
+    health:
+      show-details: always
+
+# Test-specific properties
+basket-core:
+  actor-system:
+    name: basket-test-system
+    port: 0 # Random port for tests
+  cache:
+    ttl-minutes: 1 # Short TTL for tests
+  rebalancing:
+    threshold: 0.01 # Lower threshold for tests
+    
+# Disable web server startup for repository tests
+spring.main.web-application-type: none

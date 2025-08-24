@@ -1,0 +1,17 @@
+# Use OpenJDK 21 for immediate testing
+FROM eclipse-temurin:21-jre
+
+# Set working directory
+WORKDIR /app
+
+# Copy the built JAR from local build
+COPY basket-core-service/target/basket-core-service-*.jar app.jar
+
+# Expose port
+EXPOSE 8081
+
+# Set Java options for better performance
+ENV JAVA_OPTS="-Xmx2g -Xms1g -XX:+UseG1GC"
+
+# Run the application
+CMD ["java", "-jar", "app.jar"]

@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  basket-core-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.java21
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_R2DBC_URL=r2dbc:postgresql://host.docker.internal:5432/basket_platform
+      - SPRING_R2DBC_USERNAME=basket_app_user
+      - SPRING_R2DBC_PASSWORD=basket_app_password
+      - JAVA_OPTS=-Xmx2g -Xms1g -XX:+UseG1GC
+    volumes:
+      - ./basket-core-service/src:/app/basket-core-service/src
+      - ./common/src:/app/common/src
+    depends_on:
+      - postgres
+    networks:
+      - basket-testing
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: basket_platform
+      POSTGRES_USER: basket_app_user
+      POSTGRES_PASSWORD: basket_app_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - basket-testing
+
+volumes:
+  postgres_data:
+
+networks:
+  basket-testing:
+    driver: bridge

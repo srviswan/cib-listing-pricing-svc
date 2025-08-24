@@ -1,0 +1,120 @@
+spring:
+  application:
+    name: basket-core-service
+  
+  profiles:
+    active: dev
+  
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/basket_platform
+    username: basket_app_user
+    password: basket_app_password
+    pool:
+      initial-size: 5
+      max-size: 20
+      max-idle-time: 30
+      max-acquire-time: 30
+      max-lifetime: 3600
+  
+  # Simplified configuration for Java 23 compatibility
+  main:
+    web-application-type: reactive
+    banner-mode: off
+    allow-bean-definition-overriding: true
+  
+  # Disable some features that might cause issues
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration
+
+# Performance and Monitoring Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,actuator
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    tags:
+      application: basket-core-service
+      version: 1.0.0
+      environment: development
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+        basket.operations.*: true
+      percentiles:
+        http.server.requests: 0.5, 0.95, 0.99
+        basket.operations.*: 0.5, 0.95, 0.99
+
+# Logging Configuration
+logging:
+  level:
+    com.custom.indexbasket.basket: INFO
+    org.springframework.statemachine: INFO
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc: DEBUG
+    reactor.netty: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# Server Configuration
+server:
+  port: 8081
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+    min-response-size: 1024
+
+# Simplified Akka configuration
+akka:
+  actor:
+    system-name: basket-core-system
+    default-dispatcher:
+      type: Dispatcher
+      executor: fork-join-executor
+      fork-join-executor:
+        parallelism-min: 4
+        parallelism-factor: 2.0
+        parallelism-max: 16
+      throughput: 1000
+    typed:
+      default-timeout: 30s
+  
+  # Simplified persistence
+  persistence:
+    journal:
+      plugin: akka.persistence.journal.inmem
+    snapshot-store:
+      plugin: akka.persistence.snapshot-store.local
+      local:
+        dir: target/akka-persistence/snapshots
+
+# Service Configuration
+basket-core:
+  service:
+    port: 8081
+    host: localhost
+    max-basket-size: 100
+    max-constituents: 500
+    backtest-lookback-years: 15
+    rebalance-frequency: P1D # ISO 8601 duration
+  
+  actor:
+    basket-supervisor:
+      max-baskets: 10000
+      timeout: 30s
+    state-manager:
+      snapshot-interval: 100
+      journal-cleanup-interval: 1h
