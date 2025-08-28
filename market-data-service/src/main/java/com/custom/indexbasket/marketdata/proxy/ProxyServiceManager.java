@@ -55,12 +55,7 @@ public class ProxyServiceManager {
             
             // First try to get from cache
             return cacheService.get(instrumentId, MarketDataResponse.class)
-                .flatMap(cachedData -> {
-                    if (cachedData != null) {
-                        log.debug("Cache hit for instrument: {}", instrumentId);
-                        return Mono.just(cachedData);
-                    }
-                    
+                .switchIfEmpty(Mono.defer(() -> {
                     // Cache miss, fetch from data source
                     log.debug("Cache miss for instrument: {}, fetching from data source", instrumentId);
                     return fetchFromDataSource(instrumentId, preferredDataSource)
@@ -79,6 +74,11 @@ public class ProxyServiceManager {
                                     }
                                 });
                         });
+                }))
+                .doOnNext(cachedData -> {
+                    if (cachedData != null) {
+                        log.debug("Cache hit for instrument: {}", instrumentId);
+                    }
                 });
         });
     }
@@ -166,13 +166,21 @@ public class ProxyServiceManager {
     
     // Private helper methods
     private Mono<MarketDataResponse> fetchFromDataSource(String instrumentId, String preferredDataSource) {
+        log.debug("fetchFromDataSource called with instrumentId: {}, preferredDataSource: {}", instrumentId, preferredDataSource);
+        log.debug("Available data sources: {}", dataSourceProxies.keySet());
+        
         // Try preferred data source first
         if (preferredDataSource != null && dataSourceProxies.containsKey(preferredDataSource.toUpperCase())) {
+            log.debug("Preferred data source {} found, checking availability", preferredDataSource);
             DataSourceProxy preferredProxy = dataSourceProxies.get(preferredDataSource.toUpperCase());
             return preferredProxy.isAvailable()
                 .flatMap(available -> {
+                    log.debug("Preferred data source {} availability: {}", preferredDataSource, available);
                     if (available) {
-                        return preferredProxy.getInstrumentData(instrumentId);
+                        log.debug("Calling getInstrumentData on preferred proxy for instrument: {}", instrumentId);
+                        return preferredProxy.getInstrumentData(instrumentId)
+                            .doOnSuccess(data -> log.debug("Successfully got data from preferred source: {}", data != null ? "data received" : "null data"))
+                            .doOnError(error -> log.error("Error getting data from preferred source: {}", error.getMessage()));
                     } else {
                         log.warn("Preferred data source {} is not available, trying alternatives", preferredDataSource);
                         return tryAlternativeDataSources(instrumentId, preferredDataSource);
@@ -180,6 +188,7 @@ public class ProxyServiceManager {
                 });
         }
         
+        log.debug("No preferred data source or preferred source not found, trying alternatives");
         // No preferred source, try all available sources
         return tryAlternativeDataSources(instrumentId, null);
     }

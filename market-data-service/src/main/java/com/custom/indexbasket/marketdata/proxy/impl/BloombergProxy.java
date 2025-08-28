@@ -21,7 +21,6 @@ import java.util.Map;
  * Bloomberg data source proxy implementation.
  * This is a mock implementation for development purposes.
  */
-@Service
 public class BloombergProxy extends AbstractDataSourceProxy {
     
     private static final Logger log = LoggerFactory.getLogger(BloombergProxy.class);
@@ -29,9 +28,9 @@ public class BloombergProxy extends AbstractDataSourceProxy {
     private final BloombergConfig bloombergConfig;
     
     public BloombergProxy(DataSourceConfig config, MeterRegistry meterRegistry) {
-        // Set the data source name for Bloomberg
-        config.setDataSourceName("BLOOMBERG");
         super(config, meterRegistry);
+        // Set the data source name for Bloomberg after calling super
+        config.setDataSourceName("BLOOMBERG");
         this.bloombergConfig = new BloombergConfig(config);
     }
     
@@ -51,6 +50,7 @@ public class BloombergProxy extends AbstractDataSourceProxy {
         // Transform Bloomberg raw data to MarketDataResponse
         return MarketDataResponse.builder()
             .instrumentId(rawData.getInstrumentId())
+            .symbol(rawData.getInstrumentId()) // Use instrumentId as symbol for now
             .lastPrice(rawData.getPrice())
             .bidPrice(rawData.getBidPrice())
             .askPrice(rawData.getAskPrice())
@@ -63,6 +63,8 @@ public class BloombergProxy extends AbstractDataSourceProxy {
             .dataTimestamp(rawData.getTimestamp())
             .dataSource("BLOOMBERG")
             .dataQuality("HIGH")
+            .changeAmount(BigDecimal.ZERO) // Set default values for missing fields
+            .changePercentage(BigDecimal.ZERO)
             .build();
     }
     

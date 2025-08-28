@@ -1,0 +1,5274 @@
+[
+  {
+    "test_name": "Health Check - Light Load",
+    "endpoint": "/actuator/health",
+    "method": "GET",
+    "concurrent_users": 5,
+    "total_requests": 50,
+    "successful_requests": 50,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "total_time_seconds": 0.04635906219482422,
+    "requests_per_second": 1078.5377795149245,
+    "avg_response_time_ms": 33.68003845214844,
+    "median_response_time_ms": 34.26158428192139,
+    "min_response_time_ms": 21.795034408569336,
+    "max_response_time_ms": 44.80791091918945,
+    "p95_response_time_ms": 43.83189678192139,
+    "responses": [
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.80791091918945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.425954"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.680076599121094,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.419948"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.2311954498291,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.405530"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.88112449645996,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.406202"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.52875328063965,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.418866"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.42912483215332,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.411814"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 29.023170471191406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.410426"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.68901252746582,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.425109"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.37196731567383,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.420808"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.447172164916992,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.412897"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.78104209899902,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.425249"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.84623336791992,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.417328"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.804033279418945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.417303"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.9390811920166,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.409453"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.439905166625977,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.407972"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.795034408569336,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.403344"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.43193435668945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.415993"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 33.15424919128418,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.414731"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 22.412776947021484,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.404030"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.73089027404785,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.413366"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.4240665435791,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.416078"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.185937881469727,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.411858"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.84096717834473,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.414528"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.0839786529541,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.423785"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.31601142883301,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.420033"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.40098190307617,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.422133"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.048110961914062,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.408795"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.23581886291504,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.407998"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.964073181152344,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.403740"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.743982315063477,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.410536"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.16185760498047,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.411969"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 23.02098274230957,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.404866"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.09910202026367,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.415963"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.771297454833984,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.418649"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.379222869873047,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.413274"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.54415702819824,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.417454"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.233633041381836,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.425159"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.02499580383301,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.421964"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.08601951599121,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.409041"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.919044494628906,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.419891"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 22.00794219970703,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.403995"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.393983840942383,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.410396"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.11306571960449,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.424131"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.68722915649414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.420721"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.276153564453125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.414374"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.04821586608887,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.424162"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.64398193359375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.418773"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.835763931274414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.420979"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.894052505493164,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.426052"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.192604064941406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.422364"
+      }
+    ]
+  },
+  {
+    "test_name": "Health Check - Medium Load",
+    "endpoint": "/actuator/health",
+    "method": "GET",
+    "concurrent_users": 20,
+    "total_requests": 200,
+    "successful_requests": 200,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "total_time_seconds": 0.08964991569519043,
+    "requests_per_second": 2230.900034306777,
+    "avg_response_time_ms": 60.050976276397705,
+    "median_response_time_ms": 65.11151790618896,
+    "min_response_time_ms": 21.412134170532227,
+    "max_response_time_ms": 83.65321159362793,
+    "p95_response_time_ms": 82.37764835357666,
+    "responses": [
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 65.03009796142578,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.492837"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.9826602935791,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.459870"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.2061824798584,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.455116"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.590057373046875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.458518"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 56.764841079711914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.484713"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.47714042663574,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.460474"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 49.27992820739746,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.477291"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 33.566951751708984,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.461591"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 45.453786849975586,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.473491"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.655311584472656,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.459706"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 22.87006378173828,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.450934"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.18465232849121,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.456263"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.14723205566406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.469238"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.016090393066406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.456121"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 25.706052780151367,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.453823"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.889739990234375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.469021"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.26493835449219,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.470409"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.6350154876709,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.466792"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.84702110290527,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.463018"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.90779685974121,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.460093"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.109758377075195,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.463307"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 60.20188331604004,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.488442"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 54.44002151489258,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.482695"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.420894622802734,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.463691"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.86180305480957,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.463143"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.21804237365723,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.469515"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 45.86291313171387,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.474174"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 51.93805694580078,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.480262"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.65494918823242,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.464991"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.184974670410156,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.468535"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.525177001953125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.465888"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.85201835632324,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.473227"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.84625434875488,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.467237"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 55.29928207397461,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.483703"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 49.19719696044922,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.477615"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 59.33094024658203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.487783"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 47.09506034851074,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.475564"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 46.04697227478027,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.474528"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 46.52094841003418,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.475014"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 59.22198295593262,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.487728"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 50.12011528015137,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.478641"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 60.343027114868164,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.488876"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 51.14006996154785,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.479687"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 49.58009719848633,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.478141"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 48.3250617980957,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.476900"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.4738655090332,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.470060"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 52.64592170715332,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.481244"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 63.983917236328125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.492597"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 58.768272399902344,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.487394"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 56.668996810913086,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.485332"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 51.518917083740234,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.480197"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 63.089847564697266,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.491786"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 62.98112869262695,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.491695"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 65.96994400024414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.494706"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 59.27395820617676,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.488029"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 60.461997985839844,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.489237"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 58.97092819213867,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.487760"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 63.237905502319336,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.492043"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.5932502746582,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.461413"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 50.92310905456543,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.479756"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.18392753601074,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.467032"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.16215896606445,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.468024"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 61.25688552856445,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.490132"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 59.08989906311035,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.488000"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.62819480895996,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.469553"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 59.967994689941406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.488905"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.9998893737793,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.469951"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 47.254085540771484,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.476230"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 64.18299674987793,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.493164"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 57.58309364318848,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.486584"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 56.05888366699219,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.485077"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 64.45908546447754,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.493493"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.34990882873535,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.473399"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 54.61287498474121,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.483674"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 66.74623489379883,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.495820"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 60.237884521484375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.489327"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.95086860656738,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.472055"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 66.82014465332031,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.495963"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.93203353881836,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.472089"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 55.83691596984863,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.485010"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 68.21680068969727,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.497405"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 65.34385681152344,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.494545"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.59881782531738,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.473814"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.514955520629883,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.459743"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.992652893066406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.458239"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.26514434814453,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.455522"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 25.80881118774414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.455083"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.327890396118164,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.461619"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.572797775268555,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.457887"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.412134170532227,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.450743"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.72612190246582,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.461088"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 22.38321304321289,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.451759"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.00301933288574,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.463393"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.73610496520996,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.468139"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.129920959472656,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.472546"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.382965087890625,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.461813"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.182952880859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.464627"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.923025131225586,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.468381"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.74712371826172,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.464217"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.336111068725586,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.466820"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 61.45906448364258,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.490956"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 53.569793701171875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.483081"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 67.72589683532715,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.497248"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 64.56112861633301,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.494095"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 66.23101234436035,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.495796"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 63.50207328796387,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.493080"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 65.19293785095215,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.494781"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 65.65189361572266,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.495256"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 64.32175636291504,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.493937"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 65.34767150878906,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.494975"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 67.18206405639648,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.496821"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 69.18883323669434,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.498843"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 67.12770462036133,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.496798"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 67.54016876220703,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.497225"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 67.82317161560059,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.497526"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 68.73798370361328,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.498452"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.71399688720703,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.500438"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 69.00215148925781,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.498736"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 68.39609146118164,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.498149"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 69.54193115234375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.499324"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 68.88604164123535,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.498678"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 69.01884078979492,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.498824"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.8169937133789,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.500634"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.52087783813477,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.500350"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.77407836914062,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.500614"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.1448917388916,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.499997"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.06192207336426,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.499926"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.27110862731934,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502144"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 70.83320617675781,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.500718"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 71.11787796020508,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.501015"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.02982902526855,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.501939"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.11589813232422,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502035"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.12018966674805,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502051"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.07298278808594,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502017"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.40605354309082,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502393"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 73.35782051086426,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.503356"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 71.95091247558594,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.501961"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 73.4398365020752,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.503463"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 73.03714752197266,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.503069"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.80921936035156,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502854"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 73.47416877746582,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.503529"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 73.57192039489746,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.503639"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.22208786010742,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504302"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 73.22001457214355,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.503310"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.0959644317627,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504200"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 72.87979125976562,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.502994"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.46789741516113,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504592"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.40495491027832,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504540"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.25189018249512,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504723"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 75.19984245300293,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.505688"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.2490291595459,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504749"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.05710220336914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.504571"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 75.46496391296387,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.505991"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 75.36506652832031,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.505902"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 75.17790794372559,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.505726"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 76.04289054870605,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.506604"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 74.94401931762695,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.505516"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 75.38509368896484,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.505967"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 76.7359733581543,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.507329"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 76.69711112976074,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.507302"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 76.87973976135254,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.507497"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 78.25779914855957,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.508885"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 77.16202735900879,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.507801"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 77.82101631164551,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.508498"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 77.40998268127441,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.508100"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 78.03010940551758,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.508732"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 77.80790328979492,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.508519"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 77.69584655761719,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.508419"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 78.70602607727051,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.509442"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 78.30476760864258,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.509052"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 79.15520668029785,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.509914"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 78.30810546875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.509082"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 79.24771308898926,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.510035"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 79.27989959716797,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.510078"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 81.38608932495117,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.512217"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 79.0719985961914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.509935"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 79.00714874267578,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.509887"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 80.01494407653809,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.510931"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.45301246643066,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513383"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 79.15711402893066,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.510098"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 80.96504211425781,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.511918"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 81.27403259277344,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.512238"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 80.91020584106445,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.511886"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 80.66010475158691,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.511650"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 81.87699317932129,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.512879"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.15975761413574,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513172"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 80.91306686401367,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.511938"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 81.96616172790527,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513003"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 81.99810981750488,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513047"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.00287818908691,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513063"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 81.91108703613281,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.512982"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.89408683776855,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513975"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 83.14299583435059,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.514256"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.78512954711914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513911"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 83.10198783874512,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.514238"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 83.0678939819336,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.514217"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.38911628723145,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.513550"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 82.93986320495605,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.514112"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 83.62293243408203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.514807"
+      },
+      {
+        "endpoint": "/actuator/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 83.65321159362793,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.514851"
+      }
+    ]
+  },
+  {
+    "test_name": "Vendor Health - Light Load",
+    "endpoint": "/api/v1/publishing/vendors/health",
+    "method": "GET",
+    "concurrent_users": 5,
+    "total_requests": 50,
+    "successful_requests": 50,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "total_time_seconds": 0.016728878021240234,
+    "requests_per_second": 2988.843599464128,
+    "avg_response_time_ms": 11.917805671691895,
+    "median_response_time_ms": 11.11304759979248,
+    "min_response_time_ms": 8.378267288208008,
+    "max_response_time_ms": 14.976978302001953,
+    "p95_response_time_ms": 14.562523365020752,
+    "responses": [
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.50490951538086,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531838"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 11.259794235229492,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528705"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.776042938232422,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528245"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.922908782958984,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528409"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.622978210449219,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528127"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.83209228515625,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531354"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.737014770507812,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.527276"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 11.033058166503906,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528586"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.056921005249023,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531624"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.54019546508789,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532125"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.000892639160156,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531605"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.577865600585938,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532200"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 11.265039443969727,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528905"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.811826705932617,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531669"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 11.193037033081055,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.529068"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.976978302001953,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532868"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.549970626831055,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532456"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 11.026859283447266,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528947"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 11.214733123779297,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.529149"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.29403305053711,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.527244"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.744882583618164,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.527709"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.220050811767578,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528197"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.386177062988281,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532377"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.75887680053711,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528766"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.785818099975586,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528807"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.894081115722656,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531929"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.528875350952148,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.527576"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.254859924316406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528315"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.194965362548828,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532273"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 8.378267288208008,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.526471"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.156103134155273,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532292"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.195016860961914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528348"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.351968765258789,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.527519"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.396978378295898,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531578"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.087251663208008,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528282"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.615182876586914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.527823"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.809659957885742,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.529031"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 9.799003601074219,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528034"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.70692253112793,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531956"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.423919677734375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531687"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.281749725341797,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532558"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.193296432495117,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532482"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.090112686157227,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528393"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.787725448608398,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.529104"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.757944107055664,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532087"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 14.210224151611328,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.532576"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 13.396024703979492,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.531777"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.534048080444336,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528928"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.643243789672852,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.529051"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 10.109901428222656,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.528530"
+      }
+    ]
+  },
+  {
+    "test_name": "Vendor Health - Medium Load",
+    "endpoint": "/api/v1/publishing/vendors/health",
+    "method": "GET",
+    "concurrent_users": 20,
+    "total_requests": 200,
+    "successful_requests": 200,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "total_time_seconds": 0.04979681968688965,
+    "requests_per_second": 4016.320746135026,
+    "avg_response_time_ms": 35.172656774520874,
+    "median_response_time_ms": 38.478970527648926,
+    "min_response_time_ms": 16.496896743774414,
+    "max_response_time_ms": 44.27313804626465,
+    "p95_response_time_ms": 43.6815619468689,
+    "responses": [
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.12773323059082,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571627"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 25.27165412902832,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559858"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.7741584777832,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571386"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 25.07185935974121,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559700"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.475812911987305,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559126"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.717071533203125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.556384"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 23.457765579223633,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.558194"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 23.090839385986328,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557847"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.45695686340332,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.556234"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.07707405090332,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.566870"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 29.18100357055664,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.563995"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.0998477935791,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.561932"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.30685806274414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571157"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 19.562959671020508,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.554432"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.73419761657715,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.573621"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 19.79804039001465,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.554701"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.49367332458496,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.556411"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 20.11704444885254,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.555054"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.58298873901367,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577538"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.192188262939453,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.561166"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 29.59895133972168,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.564588"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.04502296447754,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575049"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.98684883117676,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575149"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.655818939208984,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559839"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.39375686645508,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576598"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.94186019897461,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574161"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.127960205078125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559364"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.66796875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.569919"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 25.19392967224121,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.560462"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.81910514831543,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.567101"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.35604476928711,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.570653"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.361133575439453,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559673"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.36684608459473,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.569696"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.26682472229004,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574612"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.3210391998291,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576680"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.918256759643555,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574298"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.89584541320801,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574322"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.91816329956055,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.572362"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 29.97303009033203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.565433"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.62008857727051,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576094"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.2750244140625,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576764"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.91179847717285,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571419"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 23.866891860961914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559392"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.95797920227051,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.572502"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 22.31001853942871,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557868"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.618896484375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576195"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.1219596862793,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576715"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.239986419677734,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.566849"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.227951049804688,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.561851"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.18092155456543,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575820"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.33293914794922,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574017"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.68272018432617,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577383"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.14213180541992,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574862"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.9799861907959,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571716"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.074047088623047,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.566826"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.753841400146484,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576520"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 19.926071166992188,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.555708"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 20.817995071411133,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.556616"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.248071670532227,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.564058"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 22.44877815246582,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.558272"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.435976028442383,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557277"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.075963973999023,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.556936"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.687000274658203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.564565"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.543046951293945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.560435"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.179935455322266,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.560109"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 20.939111709594727,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.556883"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 31.171083450317383,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.567128"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.063846588134766,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.563036"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.075021743774414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.570061"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 18.91303062438965,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.554913"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.240711212158203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557255"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.926040649414062,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.562954"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 23.778200149536133,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559817"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.63488006591797,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.566688"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.81502151489258,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574882"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.15611457824707,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.563237"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.62500190734863,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574719"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.01605987548828,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571125"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.42096710205078,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.570576"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.01393508911133,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574184"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.44108772277832,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.572629"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 16.496896743774414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.552702"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 19.30689811706543,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.555526"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 17.721176147460938,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.553956"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.234149932861328,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.562507"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 23.682832717895508,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.559952"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 20.846128463745117,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557131"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 20.756959915161133,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557056"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 26.247024536132812,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.562561"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.5679988861084,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571898"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 19.096851348876953,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.555442"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.461963653564453,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557823"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.126001358032227,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.564535"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 20.9352970123291,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.557359"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 27.657032012939453,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.564131"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 24.39713478088379,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.560900"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 21.71921730041504,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.558245"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.156084060668945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.570702"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.47391700744629,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574040"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 28.608083724975586,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.565193"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.30609130859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576910"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.81595420837402,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.572439"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.182952880859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571822"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.18829154968262,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.573840"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 33.42270851135254,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.570089"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.211925506591797,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.566891"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.151906967163086,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575845"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.25075721740723,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.573990"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.27261924743652,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575026"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.201974868774414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575970"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.039011001586914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580821"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.137290954589844,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576933"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.37209129333496,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571180"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.35527801513672,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576177"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.031028747558594,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575865"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.68479347229004,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579531"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.78703308105469,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.573645"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 30.430078506469727,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.567302"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.79809379577637,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575683"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 36.64422035217285,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.573542"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.7319278717041,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580642"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.88769721984863,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.569811"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.66116905212402,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576621"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.927865982055664,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574902"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.57431221008301,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577561"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.7769889831543,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580777"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 35.90893745422363,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.572927"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.08205032348633,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576112"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.71402549743652,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577755"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.158935546875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581212"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 34.53421592712402,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.571598"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.47586631774902,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580552"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.817996978759766,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580904"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.27313804626465,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581370"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.72735595703125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574842"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.863182067871094,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575993"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.931846618652344,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576074"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 32.678842544555664,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.569835"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.22583770751953,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579421"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.921905517578125,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575130"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.84501075744629,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580065"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.565086364746094,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576798"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 44.187068939208984,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581433"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.43898391723633,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579700"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.146827697753906,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577421"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.41226005554199,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576698"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 40.34996032714844,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577691"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.11399841308594,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576482"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.11623764038086,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.578502"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.366981506347656,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579767"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.66810417175293,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580082"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 37.39428520202637,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.574821"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 38.114070892333984,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.575555"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.78500175476074,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579268"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.222023010253906,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579720"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.63512992858887,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581147"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.51687431335449,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581042"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.68693923950195,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580253"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.069984436035156,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.578659"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.22390937805176,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576830"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.54794120788574,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580168"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.717933654785156,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580351"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.662837982177734,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577307"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.402910232543945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581059"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.457746505737305,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581127"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.576955795288086,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581257"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.089202880859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.576782"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.92218589782715,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581626"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.01309585571289,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580731"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.58296775817871,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577350"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.465044021606445,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579247"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.207956314086914,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580003"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.1600341796875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579968"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.41514205932617,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580237"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.99895668029785,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581835"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.997671127319336,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579848"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.112993240356445,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580974"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.24109649658203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580118"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.34115982055664,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581228"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.17593574523926,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581075"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.87607765197754,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579786"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.492794036865234,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581415"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 39.5200252532959,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.577454"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.04082489013672,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579987"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.6180362701416,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580576"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.33686828613281,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581331"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.27988624572754,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581286"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.26374626159668,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580285"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.7248477935791,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580758"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.9008731842041,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579945"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.68400573730469,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581739"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.09821128845215,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581164"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.10710525512695,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580184"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.89889335632324,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580991"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 43.42508316040039,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.581527"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.71109199523926,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579830"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.793989181518555,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580924"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.481184005737305,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580623"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 42.04607009887695,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.580200"
+      },
+      {
+        "endpoint": "/api/v1/publishing/vendors/health",
+        "method": "GET",
+        "status_code": 200,
+        "response_time_ms": 41.34511947631836,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.579509"
+      }
+    ]
+  },
+  {
+    "test_name": "Basket Listing - Light Load",
+    "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+    "method": "POST",
+    "concurrent_users": 3,
+    "total_requests": 20,
+    "successful_requests": 20,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "total_time_seconds": 0.05724501609802246,
+    "requests_per_second": 349.3753930604782,
+    "avg_response_time_ms": 53.2536506652832,
+    "median_response_time_ms": 52.4824857711792,
+    "min_response_time_ms": 51.32794380187988,
+    "max_response_time_ms": 56.35976791381836,
+    "p95_response_time_ms": 56.34026527404785,
+    "responses": [
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 56.35976791381836,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.640695"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 55.41229248046875,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.639899"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.4749755859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.637011"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.36196517944336,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636937"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.4899959564209,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.637094"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 55.9697151184082,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.640603"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.03986167907715,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636713"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 54.16297912597656,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.638864"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.00791358947754,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636736"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 51.70607566833496,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636462"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 51.9709587097168,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636754"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 55.0229549407959,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.639844"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.0319938659668,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.637034"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 54.95333671569824,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.639983"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 51.61285400390625,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636673"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 55.1753044128418,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.640261"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 52.61087417602539,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.637726"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 51.76496505737305,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636905"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 51.32794380187988,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.636495"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_001/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 53.61628532409668,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.638809"
+      }
+    ]
+  },
+  {
+    "test_name": "Basket Listing - Medium Load",
+    "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+    "method": "POST",
+    "concurrent_users": 10,
+    "total_requests": 50,
+    "successful_requests": 50,
+    "failed_requests": 0,
+    "success_rate": 100.0,
+    "total_time_seconds": 0.034330129623413086,
+    "requests_per_second": 1456.4465834670223,
+    "avg_response_time_ms": 21.9618558883667,
+    "median_response_time_ms": 21.11947536468506,
+    "min_response_time_ms": 9.822845458984375,
+    "max_response_time_ms": 32.68694877624512,
+    "p95_response_time_ms": 31.557869911193848,
+    "responses": [
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 32.68694877624512,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.674737"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.61199188232422,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672770"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 21.626949310302734,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.663882"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 12.003898620605469,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.654291"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.309925079345703,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.662627"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 11.367321014404297,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.653709"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 29.811859130859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672183"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.837068557739258,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.663236"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 10.939836502075195,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.653366"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.650148391723633,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.663100"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 11.570930480957031,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.654050"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 11.173009872436523,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.653677"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 21.24190330505371,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.663772"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 31.766891479492188,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.674322"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.950069427490234,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.673527"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 22.214889526367188,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.664821"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.091047286987305,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672721"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 22.81785011291504,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.665478"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 21.61121368408203,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.664294"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.71094512939453,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.663463"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 19.54364776611328,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.662323"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.886173248291016,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.673689"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.61199188232422,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.673444"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 19.578933715820312,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.662450"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 29.603958129882812,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672501"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 29.914140701293945,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672836"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 31.236886978149414,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.674187"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 29.58202362060547,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672557"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.997047424316406,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.664000"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 22.768020629882812,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.665799"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 19.137144088745117,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.662192"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 19.466876983642578,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.662548"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 12.173175811767578,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.655280"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 10.750055313110352,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.653913"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 11.013031005859375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.654200"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 10.959863662719727,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.654175"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.951032638549805,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.664190"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 31.386852264404297,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.674653"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 10.273933410644531,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.653566"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 19.89006996154785,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.663209"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 20.87116241455078,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.664217"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 28.929948806762695,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672303"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 29.24513816833496,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672645"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.612945556640625,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.674039"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 30.328989028930664,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.673780"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 31.109094619750977,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.674587"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 28.596162796020508,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.672133"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 11.810064315795898,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.655376"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 11.046886444091797,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.654644"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_002/list",
+        "method": "POST",
+        "status_code": 200,
+        "response_time_ms": 9.822845458984375,
+        "success": true,
+        "timestamp": "2025-08-27T20:54:20.653448"
+      }
+    ]
+  },
+  {
+    "test_name": "Price Publishing - Light Load",
+    "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+    "method": "POST",
+    "concurrent_users": 3,
+    "total_requests": 20,
+    "successful_requests": 0,
+    "failed_requests": 20,
+    "success_rate": 0.0,
+    "total_time_seconds": 0.02974987030029297,
+    "requests_per_second": 672.2718384356467,
+    "avg_response_time_ms": 0,
+    "median_response_time_ms": 0,
+    "min_response_time_ms": 0,
+    "max_response_time_ms": 0,
+    "p95_response_time_ms": 0,
+    "responses": [
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.013944625854492,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.703934"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.821945190429688,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704850"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.905941009521484,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.703969"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.12504768371582,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704215"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.689146041870117,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704801"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.882265090942383,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.705017"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.603315353393555,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704759"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.55706214904785,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704734"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.781963348388672,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.703990"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.313875198364258,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704542"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.620004653930664,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704868"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.838945388793945,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704107"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.32627296447754,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704614"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.73308753967285,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704040"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.83513069152832,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704163"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.730941772460938,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704178"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.653932571411133,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704126"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.439760208129883,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704934"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 27.631759643554688,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704147"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_003/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 28.34796905517578,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.704886"
+      }
+    ]
+  },
+  {
+    "test_name": "Price Publishing - Medium Load",
+    "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+    "method": "POST",
+    "concurrent_users": 10,
+    "total_requests": 50,
+    "successful_requests": 0,
+    "failed_requests": 50,
+    "success_rate": 0.0,
+    "total_time_seconds": 0.016967058181762695,
+    "requests_per_second": 2946.8868123375255,
+    "avg_response_time_ms": 0,
+    "median_response_time_ms": 0,
+    "min_response_time_ms": 0,
+    "max_response_time_ms": 0,
+    "p95_response_time_ms": 0,
+    "responses": [
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 15.578746795654297,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.721415"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.581037521362305,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.719524"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.200355529785156,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718180"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.364625930786133,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718374"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.705968856811523,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.719849"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.877059936523438,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718074"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.271093368530273,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.719501"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 14.786005020141602,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.721042"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.154102325439453,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718435"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.303829193115234,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718610"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.064933776855469,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718397"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.448932647705078,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716915"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.76817512512207,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717262"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.329246520996094,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716847"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 9.877920150756836,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716422"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.265039443969727,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717834"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.376930236816406,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716967"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.393070220947266,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718006"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.1002197265625,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718735"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.905027389526367,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717568"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.807037353515625,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717494"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.169050216674805,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.719877"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 8.652210235595703,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.715384"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.13803482055664,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716890"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 14.195919036865234,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.720970"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.794183731079102,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.720590"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.008096694946289,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716826"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 9.678125381469727,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716561"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.667013168334961,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718581"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.809038162231445,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.719743"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.939048767089844,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718893"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 12.66622543334961,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.719639"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.493061065673828,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.720485"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.700868606567383,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718713"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.062145233154297,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718094"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.055946350097656,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718111"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.394977569580078,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718478"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 11.394023895263672,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.718496"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.51783561706543,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717641"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.007143020629883,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717149"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.44464111328125,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717606"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 8.368968963623047,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.715575"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 10.36381721496582,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717589"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 9.742975234985352,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716987"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 9.857177734375,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.717122"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 9.470939636230469,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716756"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 9.423971176147461,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716729"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 13.527154922485352,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.720851"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 8.946895599365234,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.716289"
+      },
+      {
+        "endpoint": "/api/v1/publishing/basket/LOAD_TEST_004/price",
+        "method": "POST",
+        "status_code": 400,
+        "response_time_ms": 8.391857147216797,
+        "success": false,
+        "timestamp": "2025-08-27T20:54:20.715755"
+      }
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+
+
+services:
+  # PostgreSQL with TimescaleDB extension - REQUIRED
+  postgres-timescale:
+    image: timescale/timescaledb:latest-pg15
+    container_name: basket-timescaledb
+    environment:
+      POSTGRES_DB: basket_platform
+      POSTGRES_USER: basket_user
+      POSTGRES_PASSWORD: basket_password
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U basket_user -d basket_platform"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - basket-network
+
+  # Basket Core Service - REQUIRED (Basket lifecycle management)
+  basket-core-service:
+    build:
+      context: .
+      dockerfile: basket-core-service/Dockerfile
+    container_name: basket-core-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      postgres-timescale:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=minimal
+      - MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE=health
+      - METRICS_EXPORT_PROMETHEUS_ENABLED=false
+      - LOGGING_LEVEL_ROOT=WARN
+      - LOGGING_LEVEL_COM_CUSTOM_INDEXBASKET_BASKET=INFO
+      - SPRING_R2DBC_URL=r2dbc:postgresql://postgres-timescale:5432/basket_platform
+      - SPRING_R2DBC_USERNAME=basket_user
+      - SPRING_R2DBC_PASSWORD=basket_password
+    networks:
+      - basket-network
+
+  # Market Data Service - REQUIRED (Market data and analytics)
+  market-data-service:
+    build:
+      context: .
+      dockerfile: market-data-service/Dockerfile
+    container_name: basket-market-data-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      postgres-timescale:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=minimal
+      - MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE=health
+      - METRICS_EXPORT_PROMETHEUS_ENABLED=false
+      - LOGGING_LEVEL_ROOT=WARN
+      - LOGGING_LEVEL_COM_CUSTOM_INDEXBASKET_MARKETDATA=INFO
+      - SPRING_R2DBC_URL=r2dbc:postgresql://postgres-timescale:5432/basket_platform
+      - SPRING_R2DBC_USERNAME=basket_user
+      - SPRING_R2DBC_PASSWORD=basket_password
+      - MARKET_DATA_MINIMAL=true
+      - CACHE_REDIS_ENABLED=false
+    networks:
+      - basket-network
+
+  # Publishing Service - REQUIRED (Basket listing and price publishing)
+  publishing-service:
+    build:
+      context: .
+      dockerfile: publishing-service/Dockerfile
+    container_name: basket-publishing-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      postgres-timescale:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=minimal
+      - MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE=health
+      - METRICS_EXPORT_PROMETHEUS_ENABLED=false
+      - LOGGING_LEVEL_ROOT=WARN
+      - LOGGING_LEVEL_COM_CUSTOM_INDEXBASKET_PUBLISHING=INFO
+      - SPRING_R2DBC_URL=r2dbc:postgresql://postgres-timescale:5432/basket_platform
+      - SPRING_R2DBC_USERNAME=basket_user
+      - SPRING_R2DBC_PASSWORD=basket_password
+    networks:
+      - basket-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  basket-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

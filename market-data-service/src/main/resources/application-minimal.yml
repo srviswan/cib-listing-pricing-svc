@@ -1,0 +1,18 @@
+# Minimal profile configuration for Market Data Service
+# This profile disables complex proxy services and uses simplified implementations
+
+# Market data configuration for minimal mode
+market:
+  data:
+    minimal: true
+
+# Cache configuration for minimal mode
+cache:
+  redis:
+    enabled: false
+
+# Logging configuration for minimal mode
+logging:
+  level:
+    com.custom.indexbasket.marketdata: DEBUG
+    com.custom.indexbasket.marketdata.proxy: WARN

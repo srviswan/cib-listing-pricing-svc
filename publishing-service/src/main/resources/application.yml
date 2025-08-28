@@ -1,0 +1,91 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: publishing-service
+  
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/basket_platform
+    username: basket_user
+    password: basket_password
+  
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+# Vendor Proxy Configuration
+vendor:
+  proxy:
+    enabled: true  # Use proxy services during development
+    vendors:
+      bloomberg:
+        enabled: true
+        mock-latency:
+          listing: "150-250ms"      # Realistic listing latency
+          price-publishing: "0.5-1ms" # Ultra-low latency for prices
+        mock-error-rate: 0.05       # 5% error rate for testing
+        mock-response-delay: "50-100ms" # Network delay simulation
+      
+      refinitiv:
+        enabled: true
+        mock-latency:
+          listing: "200-300ms"
+          price-publishing: "0.8-1.5ms"
+        mock-error-rate: 0.03
+        mock-response-delay: "60-120ms"
+      
+      generic:
+        enabled: true
+        mock-latency:
+          listing: "100-500ms"
+          price-publishing: "1-5ms"
+        mock-error-rate: 0.10
+        mock-response-delay: "30-200ms"
+
+# Publishing Service Configuration
+publishing:
+  basket-listing:
+    timeout: 5m          # 5 minutes timeout for basket listing
+    max-retries: 3
+    retry-delay: 30s
+  
+  price-publishing:
+    interval: 5s         # Publish prices every 5 seconds
+    timeout: 1s          # 1 second timeout for price publishing
+    max-retries: 2
+    retry-delay: 100ms
+  
+  vendor:
+    health-check-interval: 30s
+    circuit-breaker:
+      failure-rate-threshold: 50.0
+      wait-duration-in-open-state: 30s
+      sliding-window-size: 10
+
+# Monitoring and Metrics
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    com.custom.indexbasket.publishing: DEBUG
+    com.custom.indexbasket.publishing.proxy: DEBUG
+    com.custom.indexbasket.publishing.vendor: DEBUG
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc.postgresql: DEBUG
+    reactor.netty: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

@@ -4,6 +4,30 @@ spring:
   profiles:
     active: kafka  # Default to Kafka implementation (Solace requires enterprise repo)
   
+  # Profile-specific configurations
+  profiles:
+    minimal:
+      cache:
+        redis:
+          enabled: false
+      market:
+        data:
+          minimal: true
+    core:
+      cache:
+        redis:
+          enabled: true
+      market:
+        data:
+          minimal: false
+    full:
+      cache:
+        redis:
+          enabled: true
+      market:
+        data:
+          minimal: false
+  
   # Common configurations
   jackson:
     default-property-inclusion: non_null

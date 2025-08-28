@@ -2,6 +2,8 @@ package com.custom.indexbasket.marketdata;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
+import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
@@ -19,7 +21,7 @@ import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
  * @author Custom Index Basket Team
  * @version 1.0.0
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {KafkaAutoConfiguration.class, RedisAutoConfiguration.class})
 @EnableConfigurationProperties
 @ComponentScan(basePackages = {
     "com.custom.indexbasket.marketdata",

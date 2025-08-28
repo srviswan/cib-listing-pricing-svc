@@ -1,0 +1,61 @@
+# Test Configuration for Publishing Service
+spring:
+  r2dbc:
+    url: r2dbc:h2:file://./testdb
+    username: sa
+    password: 
+  
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+
+# Vendor Proxy Configuration for Testing
+vendor:
+  proxy:
+    enabled: true
+    vendors:
+      bloomberg:
+        enabled: true
+        mock-latency:
+          listing: "50-100ms"
+          price-publishing: "0.1-0.5ms"
+        mock-error-rate: 0.0  # No errors in tests
+        mock-response-delay: "10-20ms"
+      
+      refinitiv:
+        enabled: true
+        mock-latency:
+          listing: "60-120ms"
+          price-publishing: "0.2-0.8ms"
+        mock-error-rate: 0.0
+        mock-response-delay: "15-25ms"
+      
+      generic:
+        enabled: true
+        mock-latency:
+          listing: "40-80ms"
+          price-publishing: "0.3-1ms"
+        mock-error-rate: 0.0
+        mock-response-delay: "5-15ms"
+
+# Publishing Service Configuration for Testing
+publishing:
+  basket-listing:
+    timeout: 1m
+    max-retries: 1
+    retry-delay: 10s
+  
+  price-publishing:
+    interval: 10s
+    timeout: 500ms
+    max-retries: 1
+    retry-delay: 50ms
+
+# Logging for Tests
+logging:
+  level:
+    com.custom.indexbasket.publishing: DEBUG
+    org.springframework.r2dbc: WARN
+    reactor.netty: WARN

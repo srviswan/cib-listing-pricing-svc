@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.ReactiveRedisConnectionFactory;
 import org.springframework.data.redis.core.ReactiveRedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
@@ -15,18 +16,19 @@ import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * Configuration for cache services.
- * Provides Redis-based caching implementation when Redis is available.
+ * Configuration for Redis-based cache services.
+ * Only loaded when Redis is explicitly enabled and available.
  */
 @Configuration
 @ConditionalOnClass(ReactiveRedisConnectionFactory.class)
+@ConditionalOnProperty(name = "cache.redis.enabled", havingValue = "true")
 public class CacheConfiguration {
     
     /**
      * Configure ReactiveRedisTemplate for object serialization
+     * Only loaded when Redis classes are available
      */
     @Bean
-    @ConditionalOnProperty(name = "cache.redis.enabled", havingValue = "true", matchIfMissing = true)
     public ReactiveRedisTemplate<String, Object> reactiveRedisTemplate(
             ReactiveRedisConnectionFactory connectionFactory,
             ObjectMapper objectMapper) {
@@ -47,10 +49,11 @@ public class CacheConfiguration {
     }
     
     /**
-     * Configure the common CacheService implementation
+     * Configure the Redis-based CacheService implementation
+     * Only loaded when Redis is available and enabled
      */
     @Bean
-    @ConditionalOnProperty(name = "cache.redis.enabled", havingValue = "true", matchIfMissing = true)
+    @Primary
     public CacheService cacheService(ReactiveRedisTemplate<String, Object> redisTemplate,
                                    ObjectMapper objectMapper,
                                    MeterRegistry meterRegistry) {

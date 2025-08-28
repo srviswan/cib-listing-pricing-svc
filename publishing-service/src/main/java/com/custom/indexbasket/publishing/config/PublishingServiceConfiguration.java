@@ -1,17 +1,14 @@
-package com.custom.indexbasket.marketdata.config;
+package com.custom.indexbasket.publishing.config;
 
 import com.custom.indexbasket.common.caching.CacheService;
 import com.custom.indexbasket.common.caching.CacheStats;
 import com.custom.indexbasket.common.communication.ActorAdapter;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import com.custom.indexbasket.common.communication.EventAdapter;
 import com.custom.indexbasket.common.communication.GrpcAdapter;
 import com.custom.indexbasket.common.communication.RestAdapter;
 import com.custom.indexbasket.common.messaging.EventPublisher;
 import com.custom.indexbasket.common.messaging.PublishResult;
 import com.custom.indexbasket.common.messaging.PublishingMetrics;
-import com.custom.indexbasket.marketdata.proxy.config.DataSourceConfig;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -20,24 +17,19 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Configuration for Market Data Service.
- * Sets up cache integration using the common CacheService.
- * Only loaded when not in minimal mode.
+ * Configuration for Publishing Service.
+ * Sets up in-memory implementations of common module beans for development/testing.
  */
 @Configuration
 @EnableWebFluxSecurity
-@EnableConfigurationProperties(DataSourceConfig.class)
-@ConditionalOnProperty(name = "market.data.minimal", havingValue = "false", matchIfMissing = true)
-public class MarketDataConfiguration {
-    
-    // CacheService is provided by the common module
-    // No additional configuration needed here
+public class PublishingServiceConfiguration {
     
     /**
      * Simple in-memory cache service for development/testing
@@ -145,62 +137,46 @@ public class MarketDataConfiguration {
             
             @Override
             public Mono<Long> increment(String key) {
-                Object value = cache.get(key);
-                if (value instanceof Number) {
-                    long newValue = ((Number) value).longValue() + 1;
-                    cache.put(key, newValue);
-                    return Mono.just(newValue);
-                }
-                cache.put(key, 1L);
-                return Mono.just(1L);
+                return increment(key, 1L);
             }
             
             @Override
             public Mono<Long> increment(String key, long delta) {
-                Object value = cache.get(key);
-                if (value instanceof Number) {
-                    long newValue = ((Number) value).longValue() + delta;
-                    cache.put(key, newValue);
-                    return Mono.just(newValue);
-                }
-                cache.put(key, delta);
-                return Mono.just(delta);
+                Object existing = cache.get(key);
+                long newValue = (existing instanceof Number) ? ((Number) existing).longValue() + delta : delta;
+                cache.put(key, newValue);
+                return Mono.just(newValue);
             }
             
             @Override
             public Mono<Double> increment(String key, double delta) {
-                Object value = cache.get(key);
-                if (value instanceof Number) {
-                    double newValue = ((Number) value).doubleValue() + delta;
-                    cache.put(key, newValue);
-                    return Mono.just(newValue);
-                }
-                cache.put(key, delta);
-                return Mono.just(delta);
+                Object existing = cache.get(key);
+                double newValue = (existing instanceof Number) ? ((Number) existing).doubleValue() + delta : delta;
+                cache.put(key, newValue);
+                return Mono.just(newValue);
             }
             
             @Override
             public Mono<Boolean> expire(String key, Duration ttl) {
-                // Simple implementation - just return true
+                // Simple implementation doesn't track expiration
                 return Mono.just(true);
             }
             
             @Override
             public Mono<Duration> getTtl(String key) {
-                // Simple implementation - return null
+                // Simple implementation doesn't track expiration
                 return Mono.empty();
             }
             
             @Override
             public Mono<Boolean> persist(String key) {
-                // Simple implementation - just return true
+                // Simple implementation doesn't track expiration
                 return Mono.just(true);
             }
             
             @Override
             public Mono<CacheStats> getStats() {
-                CacheStats stats = new CacheStats("in-memory-cache");
-                return Mono.just(stats);
+                return Mono.just(new CacheStats("publishing-service-cache"));
             }
             
             @Override
@@ -224,73 +200,86 @@ public class MarketDataConfiguration {
         return new EventPublisher() {
             @Override
             public <T> Mono<Void> publish(String topic, String key, T event) {
-                // Simple implementation - just log for now
-                System.out.println("Publishing event to topic: " + topic + ", key: " + key + ", event: " + event);
+                // Simple in-memory implementation - just log the event
+                System.out.println("Event published - Topic: " + topic + ", Key: " + key + ", Event: " + event);
                 return Mono.empty();
             }
             
             @Override
             public <T> Mono<Void> publish(String topic, String key, T event, Map<String, String> headers) {
-                // Simple implementation - just log for now
-                System.out.println("Publishing event to topic: " + topic + ", key: " + key + ", event: " + event + ", headers: " + headers);
+                // Simple in-memory implementation - just log the event
+                System.out.println("Event published with headers - Topic: " + topic + ", Key: " + key + ", Event: " + event + ", Headers: " + headers);
                 return Mono.empty();
             }
             
             @Override
             public <T> Mono<Void> publishBatch(String topic, Map<String, T> events) {
-                // Simple implementation - just log for now
-                System.out.println("Publishing batch to topic: " + topic + ", events: " + events);
+                // Simple in-memory implementation - just log the events
+                System.out.println("Batch events published - Topic: " + topic + ", Events: " + events.size());
                 return Mono.empty();
             }
             
             @Override
             public <T> Mono<Void> publishGuaranteed(String topic, String key, T event) {
-                // Simple implementation - just log for now
-                System.out.println("Publishing guaranteed event to topic: " + topic + ", key: " + key + ", event: " + event);
+                // Simple in-memory implementation - just log the event
+                System.out.println("Guaranteed event published - Topic: " + topic + ", Key: " + key + ", Event: " + event);
                 return Mono.empty();
             }
             
             @Override
             public <T> Mono<PublishResult> publishWithConfirmation(String topic, String key, T event) {
-                // Simple implementation - just log for now
-                System.out.println("Publishing with confirmation to topic: " + topic + ", key: " + key + ", event: " + event);
-                PublishResult result = new PublishResult(topic, "mock-message-id", true, 0L);
-                return Mono.just(result);
+                // Simple in-memory implementation - just log the event
+                System.out.println("Event published with confirmation - Topic: " + topic + ", Key: " + key + ", Event: " + event);
+                return Mono.just(new PublishResult(topic, key, true, 0L));
             }
             
             @Override
             public <T, R> Mono<R> request(String topic, String key, T request, Class<R> responseType, Duration timeout) {
-                // Simple implementation - just log for now
-                System.out.println("Request to topic: " + topic + ", key: " + key + ", request: " + request);
+                // Simple in-memory implementation - just log the request
+                System.out.println("Request published - Topic: " + topic + ", Key: " + key + ", Request: " + request);
                 return Mono.empty();
             }
             
             @Override
             public Mono<Boolean> isTopicHealthy(String topic) {
-                // Simple implementation - just return true
+                // Simple in-memory implementation - always return healthy
                 return Mono.just(true);
             }
             
             @Override
             public Mono<PublishingMetrics> getMetrics() {
-                // Simple implementation - just return empty metrics
-                PublishingMetrics metrics = new PublishingMetrics("default-topic");
-                return Mono.just(metrics);
+                // Simple in-memory implementation - return empty metrics
+                return Mono.just(new PublishingMetrics("publishing-service"));
             }
         };
     }
     
     /**
-     * Simple REST adapter for development/testing
+     * Security configuration to permit all requests for development
+     */
+    @Bean
+    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+            .authorizeExchange(exchanges -> exchanges
+                .anyExchange().permitAll()
+            )
+            .csrf(csrf -> csrf.disable())
+            .httpBasic(httpBasic -> httpBasic.disable());
+        
+        return http.build();
+    }
+    
+    /**
+     * Simple in-memory REST adapter for development/testing
      */
     @Bean
     public RestAdapter restAdapter() {
         return new RestAdapter() {
             @Override
             public <T> T executeRequest(String url, String method, Object requestBody, Class<T> responseType) {
-                // Simple implementation - just log for now
-                System.out.println("REST request: " + method + " " + url + " with body: " + requestBody);
-                return null; // Return null for now
+                // Simple in-memory implementation - just log the request
+                System.out.println("REST " + method + " request to: " + url + " with body: " + requestBody);
+                return null;
             }
             
             @Override
@@ -305,26 +294,26 @@ public class MarketDataConfiguration {
             
             @Override
             public String getEndpointUrl() {
-                return "http://localhost:8082";
+                return "http://localhost:8083";
             }
         };
     }
     
     /**
-     * Simple event adapter for development/testing
+     * Simple in-memory event adapter for development/testing
      */
     @Bean
     public EventAdapter eventAdapter() {
         return new EventAdapter() {
             @Override
             public void publishEvent(String topic, Object event) {
-                // Simple implementation - just log for now
-                System.out.println("Event published to topic: " + topic + ", event: " + event);
+                // Simple in-memory implementation - just log the event
+                System.out.println("Event published to topic: " + topic + " with event: " + event);
             }
             
             @Override
-            public void subscribeToTopic(String topic, EventHandler handler) {
-                // Simple implementation - just log for now
+            public void subscribeToTopic(String topic, EventAdapter.EventHandler handler) {
+                // Simple in-memory implementation - just log the subscription
                 System.out.println("Subscribed to topic: " + topic);
             }
             
@@ -346,16 +335,16 @@ public class MarketDataConfiguration {
     }
     
     /**
-     * Simple gRPC adapter for development/testing
+     * Simple in-memory gRPC adapter for development/testing
      */
     @Bean
     public GrpcAdapter grpcAdapter() {
         return new GrpcAdapter() {
             @Override
             public <T> T executeCall(String service, String method, Object request, Class<T> responseType) {
-                // Simple implementation - just log for now
-                System.out.println("gRPC call: " + service + "." + method + " with request: " + request);
-                return null; // Return null for now
+                // Simple in-memory implementation - just log the call
+                System.out.println("gRPC call to service: " + service + " method: " + method + " with request: " + request);
+                return null;
             }
             
             @Override
@@ -381,22 +370,22 @@ public class MarketDataConfiguration {
     }
     
     /**
-     * Simple actor adapter for development/testing
+     * Simple in-memory actor adapter for development/testing
      */
     @Bean
     public ActorAdapter actorAdapter() {
         return new ActorAdapter() {
             @Override
             public void sendMessage(String actorPath, Object message) {
-                // Simple implementation - just log for now
-                System.out.println("Actor message sent to: " + actorPath + ", message: " + message);
+                // Simple in-memory implementation - just log the message
+                System.out.println("Actor message sent to: " + actorPath + " with message: " + message);
             }
             
             @Override
             public <T> T askMessage(String actorPath, Object message, Class<T> responseType, long timeoutMs) {
-                // Simple implementation - just log for now
-                System.out.println("Actor ask message to: " + actorPath + ", message: " + message + ", timeout: " + timeoutMs);
-                return null; // Return null for now
+                // Simple in-memory implementation - just log the message
+                System.out.println("Actor ask to: " + actorPath + " with message: " + message);
+                return null;
             }
             
             @Override
@@ -419,22 +408,5 @@ public class MarketDataConfiguration {
                 return 0;
             }
         };
-    }
-    
-    /**
-     * Security configuration to allow all requests to market data endpoints
-     */
-    @Bean
-    public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        return http
-            .authorizeExchange(authz -> authz
-                .pathMatchers("/api/v1/market-data/**").permitAll()
-                .pathMatchers("/api/v1/proxy/**").permitAll()
-                .pathMatchers("/actuator/**").permitAll()
-                .anyExchange().authenticated()
-            )
-            .csrf(csrf -> csrf.disable())
-            .httpBasic(basic -> basic.disable())
-            .build();
     }
 }

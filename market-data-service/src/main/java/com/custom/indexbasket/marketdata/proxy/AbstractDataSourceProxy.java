@@ -65,15 +65,21 @@ public abstract class AbstractDataSourceProxy implements DataSourceProxy {
     
     @Override
     public Mono<MarketDataResponse> getInstrumentData(String instrumentId) {
+        log.debug("AbstractDataSourceProxy.getInstrumentData called for instrument: {} from data source: {}", 
+            instrumentId, config.getDataSourceName());
+        
         return Mono.defer(() -> {
             Timer.Sample sample = Timer.start(meterRegistry);
             
             return Mono.fromCallable(() -> rateLimiter.acquirePermission())
                 .then(fetchFromSource(instrumentId)
-                    .map(this::transformData))
+                    .doOnNext(rawData -> log.debug("Raw data received from fetchFromSource: {}", rawData != null ? "data received" : "null data"))
+                    .map(this::transformData)
+                    .doOnNext(response -> log.debug("Data transformed successfully: {}", response != null ? "response created" : "null response")))
                 .doOnSuccess(result -> {
                     sample.stop(requestTimer);
                     successCounter.increment();
+                    log.debug("Successfully completed getInstrumentData for instrument: {}", instrumentId);
                 })
                 .doOnError(error -> {
                     sample.stop(requestTimer);

@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
  * Redis implementation of the common CacheService interface.
  * Provides reactive Redis caching with metrics and monitoring.
  */
-@Service
 public class RedisCacheService implements CacheService {
     
     private static final Logger log = LoggerFactory.getLogger(RedisCacheService.class);
