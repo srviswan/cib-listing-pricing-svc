@@ -1,0 +1,130 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /integration-manager
+
+spring:
+  application:
+    name: integration-manager-service
+  
+  profiles:
+    active: integration
+  
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+# Integration Manager Configuration
+integration:
+  services:
+    sma-adapter:
+      url: ${SMA_ADAPTER_URL:http://localhost:8084/sma-adapter}
+      timeout: 5000
+      retry-attempts: 3
+    
+    fix-adapter:
+      url: ${FIX_ADAPTER_URL:http://localhost:8085/fix-adapter}
+      timeout: 10000
+      retry-attempts: 3
+    
+    basket-core:
+      url: ${BASKET_CORE_URL:http://localhost:8081}
+      timeout: 5000
+      retry-attempts: 3
+    
+    market-data:
+      url: ${MARKET_DATA_URL:http://localhost:8082}
+      timeout: 5000
+      retry-attempts: 3
+  
+  orchestration:
+    basket-price-calculation:
+      enabled: true
+      batch-size: 50
+      processing-interval: 5000 # milliseconds
+    
+    real-time-publishing:
+      enabled: true
+      publish-interval: 5000 # milliseconds
+      max-concurrent-baskets: 100
+    
+    data-validation:
+      enabled: true
+      price-tolerance: 0.01 # 1 cent tolerance
+      max-age-minutes: 5
+
+# Management and Monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    com.custom.indexbasket.integration: DEBUG
+    org.springframework.web.reactive: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: /var/log/integration-manager.log
+
+# Security Configuration
+security:
+  oauth2:
+    resourceserver:
+      jwt:
+        issuer-uri: ${JWT_ISSUER_URI:http://localhost:8080/realms/cib-platform}
+
+# Circuit Breaker Configuration
+resilience4j:
+  circuitbreaker:
+    instances:
+      sma-adapter:
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 30s
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+      
+      fix-adapter:
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 30s
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+  
+  retry:
+    instances:
+      sma-adapter:
+        max-attempts: 3
+        wait-duration: 1s
+      
+      fix-adapter:
+        max-attempts: 3
+        wait-duration: 2s
+
+# Performance Configuration
+performance:
+  thread-pool:
+    core-size: 10
+    max-size: 20
+    queue-capacity: 100
+  
+  orchestration:
+    max-concurrent-operations: 50
+    timeout: 30000ms

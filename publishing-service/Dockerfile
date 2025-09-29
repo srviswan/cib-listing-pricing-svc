@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y maven
 # Copy the entire project
 COPY . .
 
-# Build the entire project first
-RUN mvn clean install -DskipTests
+# Build the entire project first from the root
+RUN mvn clean install -DskipTests -pl publishing-service -am
 
 # Expose port
 EXPOSE 8083
@@ -20,4 +20,4 @@ EXPOSE 8083
 ENV JAVA_OPTS="-Xmx2g -Xms1g -XX:+UseG1GC"
 
 # Run the application
-CMD ["mvn", "spring-boot:run", "-pl", "publishing-service"]
+CMD ["java", "-jar", "publishing-service/target/publishing-service-1.0.0-SNAPSHOT.jar"]

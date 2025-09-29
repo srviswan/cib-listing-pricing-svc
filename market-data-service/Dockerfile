@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y maven
 # Copy the entire project
 COPY . .
 
-# Build the entire project first
-RUN mvn clean install -DskipTests
+# Build the entire project first from the root
+RUN mvn clean install -DskipTests -pl market-data-service -am
 
 # Expose port
 EXPOSE 8082
@@ -20,4 +20,4 @@ EXPOSE 8082
 ENV JAVA_OPTS="-Xmx2g -Xms1g -XX:+UseG1GC"
 
 # Run the application
-CMD ["mvn", "spring-boot:run", "-pl", "market-data-service"]
+CMD ["java", "-jar", "market-data-service/target/market-data-service-1.0.0-SNAPSHOT.jar"]

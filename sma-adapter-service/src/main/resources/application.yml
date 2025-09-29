@@ -1,0 +1,124 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /sma-adapter
+
+spring:
+  application:
+    name: sma-adapter-service
+  
+  profiles:
+    active: sma
+  
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
+      - org.springframework.boot.autoconfigure.r2dbc.R2dbcDataAutoConfiguration
+      - org.springframework.boot.autoconfigure.r2dbc.R2dbcRepositoriesAutoConfiguration
+  
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+# SMA Refinitiv Configuration
+sma:
+  refinitiv:
+    api:
+      base-url: ${SMA_API_URL:https://api.refinitiv.com}
+      app-key: ${SMA_APP_KEY:your-app-key}
+      username: ${SMA_USERNAME:your-username}
+      password: ${SMA_PASSWORD:your-password}
+    
+    connection:
+      timeout: 30000
+      retry-attempts: 3
+      retry-delay: 1000
+      max-connections: 10
+      keep-alive: true
+    
+    subscription:
+      symbols: ${SMA_SYMBOLS:AAPL,MSFT,GOOGL,TSLA,AMZN}
+      fields: ${SMA_FIELDS:BID,ASK,LAST_PRICE,VOLUME,OPEN,HIGH,LOW}
+      update-frequency: ${SMA_FREQUENCY:1000} # milliseconds
+      batch-size: 100
+    
+    cache:
+      enabled: true
+      ttl: 300 # seconds
+      max-size: 10000
+      cleanup-interval: 600 # seconds
+
+# Management and Monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    com.custom.indexbasket.sma: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.netty: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: /var/log/sma-adapter.log
+
+# Security Configuration
+security:
+  oauth2:
+    resourceserver:
+      jwt:
+        issuer-uri: ${JWT_ISSUER_URI:http://localhost:8080/realms/cib-platform}
+  
+  sma:
+    api-key-rotation: true
+    rate-limiting: 1000/hour
+    ip-whitelist: ${SMA_ALLOWED_IPS:}
+
+# Circuit Breaker Configuration
+resilience4j:
+  circuitbreaker:
+    instances:
+      sma-api:
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 30s
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        permitted-number-of-calls-in-half-open-state: 3
+  
+  retry:
+    instances:
+      sma-api:
+        max-attempts: 3
+        wait-duration: 1s
+        exponential-backoff-multiplier: 2
+
+# Performance Configuration
+performance:
+  thread-pool:
+    core-size: 10
+    max-size: 20
+    queue-capacity: 100
+  
+  batch-processing:
+    enabled: true
+    batch-size: 50
+    flush-interval: 1000ms

@@ -1,0 +1,125 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /fix-adapter
+
+spring:
+  application:
+    name: fix-adapter-service
+  
+  profiles:
+    active: fix
+  
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+# FIX Bloomberg Configuration
+fix:
+  bloomberg:
+    connection:
+      host: ${BLOOMBERG_FIX_HOST:fix.bloomberg.com}
+      port: ${BLOOMBERG_FIX_PORT:8080}
+      sender-comp-id: ${FIX_SENDER_COMP_ID:YOUR_COMP_ID}
+      target-comp-id: ${FIX_TARGET_COMP_ID:BLOOMBERG}
+      use-ssl: true
+      ssl-cert-path: ${BLOOMBERG_CERT_PATH:/path/to/cert}
+    
+    session:
+      begin-string: FIX.4.4
+      heartbeat-interval: 30
+      connection-timeout: 10
+      reconnect-interval: 30
+      use-data-dictionary: true
+      data-dictionary: /config/FIX44.xml
+      start-time: 00:00:00
+      end-time: 23:59:59
+      time-zone: UTC
+    
+    authentication:
+      username: ${BLOOMBERG_USERNAME:your-username}
+      password: ${BLOOMBERG_PASSWORD:your-password}
+      cert-path: ${BLOOMBERG_CERT_PATH:/path/to/cert}
+    
+    message:
+      default-app-version: 9
+      default-encoding: UTF-8
+      validate-messages: true
+      log-messages: true
+      log-heartbeats: false
+    
+    market-data:
+      enabled: true
+      symbols: ${BLOOMBERG_SYMBOLS:AAPL,MSFT,GOOGL}
+      fields: ${BLOOMBERG_FIELDS:BID,ASK,LAST_PRICE,VOLUME}
+      update-frequency: ${BLOOMBERG_FREQUENCY:1000}
+
+# Management and Monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    com.custom.indexbasket.fix: DEBUG
+    org.springframework.web.reactive: DEBUG
+    quickfixj: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: /var/log/fix-adapter.log
+
+# Security Configuration
+security:
+  oauth2:
+    resourceserver:
+      jwt:
+        issuer-uri: ${JWT_ISSUER_URI:http://localhost:8080/realms/cib-platform}
+
+# Circuit Breaker Configuration
+resilience4j:
+  circuitbreaker:
+    instances:
+      fix-session:
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 30s
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        permitted-number-of-calls-in-half-open-state: 3
+  
+  retry:
+    instances:
+      fix-session:
+        max-attempts: 3
+        wait-duration: 2s
+        exponential-backoff-multiplier: 2
+
+# Performance Configuration
+performance:
+  thread-pool:
+    core-size: 5
+    max-size: 10
+    queue-capacity: 50
+  
+  message-processing:
+    batch-size: 10
+    flush-interval: 500ms
+    max-retries: 3
